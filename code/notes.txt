@@ -1,0 +1,3 @@
+
+sshsha1 root@laborrouter.lan "cat /sys/bus/w1/devices/28-0000052b9743/w1_slave" | perl -n -e 'if ($_ =~ / t=(\d+)/) {print "Temperatur: ". ((int $1)/1000.0)."° Celsius\n";}'
+
